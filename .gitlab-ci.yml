@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+
+variables:
+  MY_VARIABLE: "some_value"
+
+before_script:
+  - echo "Setting up environment"
+
+build:
+  stage: build
+  script:
+    - echo "Building the project"
+
+test:
+  stage: test
+  script:
+    - echo "Running tests"
