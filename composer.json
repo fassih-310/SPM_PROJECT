@@ -1,11 +1,13 @@
 {
     "name": "chtalha/invoice",
+    "description": "A description of your package",
     "authors": [
         {
             "name": "Talha Khalil",
             "email": "talhakhalil974@gmail.com"
         }
     ],
+    "license": "proprietary", // or "MIT", "GPL-3.0", etc. for open-source licenses
     "require-dev": {
         "phpunit/phpunit": "^10.5"
     }
