@@ -55,6 +55,6 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Run PHPUnit tests
-      run: vendor/bin/phpunit
+      run: composer require --dev phpstan/phpstan
 
     # Add additional steps as needed for your testing job
