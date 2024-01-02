@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,8 +31,25 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
+    - name: PHP CLI lint
+      run: find . -name "*.php" -exec php -l {} \;
+
+  analyze:
+    needs: lint
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install PHPStan
+      run: composer require --dev phpstan/phpstan
+
+    - name: Run PHPStan analysis
+      run: vendor/bin/phpstan analyze --no-ansi
+
   test:
-    needs: build
+    needs: analyze
     runs-on: ubuntu-latest
 
     steps:
