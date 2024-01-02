@@ -7,7 +7,7 @@
             "email": "talhakhalil974@gmail.com"
         }
     ],
-    "license": "proprietary", // or "MIT", "GPL-3.0", etc. for open-source licenses
+    "license": "proprietary",
     "require-dev": {
         "phpunit/phpunit": "^10.5"
     }
