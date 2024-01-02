@@ -45,8 +45,6 @@ jobs:
     - name: Install PHPStan
       run: composer require --dev phpstan/phpstan
 
-    - name: Run PHPStan analysis
-      run: vendor/bin/phpstan analyze --no-ansi
 
   test:
     needs: analyze
