@@ -37,7 +37,7 @@ endwhile;
 </style>
 <div class="card card-outline card-primary">
 	<div class="card-header">
-	<h3 class="card-title"><?php echo !isset($_GET['id']) ? "Invoice" :"Edit Invoice" ?></h3>
+	<h3 class="card-title"><?php echo !isset($_GET['id']) ? "New Invoice" :"Edit Invoice" ?></h3>
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
